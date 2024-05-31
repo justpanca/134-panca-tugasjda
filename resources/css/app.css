@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Roboto", "sans-serif";
+}
+
+.hero-section {
+  background-image: url("../../public/images/hero.jpg");
+  background-position: center;
+  background-size: cover;
+  height: calc(100vh - 65px);
+  position: relative;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.social-icons svg {
+  width: 25px;
+  height: 25px;
+  fill: #000;
+}
+
+.input {
+  border: 1px solid black;
+}
+
+.icon-404 {
+  width: 200px;
+  height: 200px;
+}
+
+@media screen and (max-width: 1080px) {
+  .hero-section {
+    background-position: (0 50%);
+    background-size: cover;
+  }
+}
